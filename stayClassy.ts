@@ -1,7 +1,7 @@
 class Employee {
     private name : string;
     since : Date;
-    private salary: number;
+    protected salary: number;
 
     constructor(name: string, startDate: Date, salary: number) {
         this.name = name;
@@ -14,6 +14,7 @@ class Employee {
     }
 }
 
+// Inheritance
 class Consultant extends Employee {
     private specialistCapability : string;
     likesOOP : boolean;
@@ -22,13 +23,22 @@ class Consultant extends Employee {
         this.specialistCapability = specialistCapability;
         this.likesOOP = likesOOP;
     }
-    givePayRise() {
-        console.log("BOYYYY... GET THE HELL OUT OF HERE")
+    // Encapsulation
+    givePayRise(newPay : number) {
+        if (newPay > 100000) {
+            console.log("BOYYYY... GET THE HELL OUT OF HERE")
+        } else {
+            this.salary = newPay;
+        }
     }
     convertToOOP() {
-        console.log("public static void main string args")
+        console.log("ayo verbose syntax ain't even that bad")
+        this.likesOOP = true;
     }
-
 }
 
 const khizar = new Consultant('Khizar', new Date(2021, 9, 30), 100000, 'D&E', false);
+
+// Polymorphism 
+console.log(khizar instanceof Consultant);
+console.log(khizar instanceof Employee);
