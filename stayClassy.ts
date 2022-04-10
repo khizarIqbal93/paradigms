@@ -17,7 +17,7 @@ class Employee {
 // Inheritance
 class Consultant extends Employee {
     private specialistCapability : string;
-    likesOOP : boolean;
+    private likesOOP : boolean;
     constructor(name: string, startDate:Date, salary : number, specialistCapability: string, likesOOP: boolean){
         super(name, startDate, salary)
         this.specialistCapability = specialistCapability;
