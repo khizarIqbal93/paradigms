@@ -37,7 +37,7 @@ class Consultant extends Employee {
     }
 }
 
-const khizar = new Consultant('Khizar', new Date(2021, 9, 30), 100000, 'D&E', false);
+const khizar = new Consultant('Khizar', new Date(2021, 9, 30), 100000, 'Development', false);
 
 // Polymorphism 
 console.log(khizar instanceof Consultant);
