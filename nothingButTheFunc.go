@@ -6,13 +6,11 @@ import (
 )
 
 func main() {
-	makeGreeting := greet("Chirag")
-	makeGreeting()
-}
-
-// First Class Function
-var firstClass func(string) = func(name string) {
-	fmt.Println("Hey", name, "Im first class 💰")
+	// First Class Function
+	firstClass := func(name string) {
+		fmt.Println("Hey", name, "I'm first class 💰")
+	}
+	firstClass("Khizar")
 }
 
 // Higher Order Functions
@@ -26,3 +24,13 @@ func greet(name string) func() {
 		}
 	}
 }
+
+// Recursion
+func factorial(num int) int {
+	if num == 1 { //base case
+		return num
+	}
+	return num * factorial(num-1)
+}
+
+// currying
